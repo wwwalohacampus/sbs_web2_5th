@@ -1,0 +1,99 @@
+
+* { margin: 0; padding: 0; border: 0; }
+
+/* 상품 목록 */
+.product-list {
+    display: flex;      
+    flex-wrap: wrap;    /* 컨텐츠가 넘치면, 다음 줄로 배치 */
+    /* 가로 사이즈 고정 */
+    width: 360px;
+    margin: 0 auto;  
+}
+
+/* 모바일 */
+.product-list .card {
+    width: calc(98% / 1);   /* 카드 1칸 */
+    margin: 1%;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(200,200,200, 0.3);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.product-list .card:hover {
+    transition: transform 0.5s;
+    transform: translateY(-10px);
+    box-shadow: 10px 15px 10px rgba(200,200,200,0.5);
+}
+
+.product-list .card .img-box {
+    height: auto;
+    overflow: hidden;
+}
+
+.product-list .card .img-box img {
+    width: 100%;
+}
+
+.product-list .card .img-box img:hover {
+    transition: transform 0.8s;
+    transform: scale(1.2);
+}
+
+.product-list .card .info {
+    padding: 40px;
+    background-color: white;
+}
+
+.product-list .card .info h2 { margin: 20px 0;}
+.product-list .card .info p { margin-bottom: 20px; }
+.product-list .card .info button {
+    float: right;
+    margin-right: 20px;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+}
+
+/* 반응형 적용하기 */
+/* 모바일 (가로) */
+@media screen and (min-width: 600px) {
+
+    .product-list {
+        /* 가로 사이즈 고정 */
+        width: 360px;
+        margin: 0 auto;  
+    }
+
+    .product-list .card {
+        width: calc(96% / 2);   /* 카드 2칸 */
+    }
+}
+
+/* 태블릿 */
+@media screen and (min-width: 768px) {
+
+    .product-list {
+        /* 가로 사이즈 고정 */
+        width: 760px;
+    }
+
+    .product-list .card {
+        width: calc(94% / 3);   /* 카드 3칸 */
+    }
+}
+
+/* PC */
+@media screen and (min-width: 1200px) {
+
+    .product-list {
+        /* 가로 사이즈 고정 */
+        width: 1200px;
+    }
+
+    .product-list .card {
+        width: calc(92% / 4);   /* 카드 4칸 */
+    }
+}
