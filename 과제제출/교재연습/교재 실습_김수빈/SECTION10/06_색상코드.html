@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keat</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        div {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        #word {background: red;}
+        #hex {background: #ff0000;} 
+        /* hex코드는 두 자리씩 구분해 공통되는 항목을 한 가지로 줄여 #f00으로 입력 가능 */
+        #rgb {background: rgb(255,0,0);}
+        #hsl {background: hsl(0,100%,50%);}
+        #rgba {background: rgba(255,0,0,0.5);} /* 투명도 50% */
+        #hsla {background: hsla(0,100%,50%,0.5);} /* 투명도 50% */
+    </style>
+</head>
+<body>
+    <div id="word">word: 단어로 입력하는 형식</div>
+    <div id="hex">hex: #웹 번호로 입력하는 형식</div>
+    <div id="rgb">rgb: rgb(red,green,blue)</div>
+    <div id="hsl">hsl: hsl(hue, saturation, lightness)</div>
+    <div id="rgba">rgba: rgb형식에서 alpha값 추가</div>
+    <div id="hsla">hsla: hsl형식에서 alpha값 추가</div>
+</body>
+</html>

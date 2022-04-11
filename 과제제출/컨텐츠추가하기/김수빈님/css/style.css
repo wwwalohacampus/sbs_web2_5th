@@ -1,0 +1,333 @@
+
+:root {
+    --main: #cbaa8a;
+    --sub: #c51a27;
+}
+
+#wrap {}
+
+/* 영역 확인을 위한 border */
+/* header, section, footer {border: 1px solid black;} */
+
+/* 공통 */
+.inner-box {width: 100%; margin: 0 auto;}
+/* 모바일에서만 보여질 요소 */
+.mobile {display: none;}
+
+/* flex */
+.flex {display: flex;}
+.flex.flex-start {justify-content: flex-start;}
+.flex.flex-end {justify-content: flex-end;}
+.flex.flex-center {justify-content: center;}
+.flex.flex-between {justify-content: space-between;}
+.flex.flex-around {justify-content: space-around;}
+.flex.align-center {align-content: center;}
+.flex.align-items-center {align-items: center;}
+.flex.flex-wrap {flex-wrap: wrap;}
+
+/* 헤더 */
+.header {position: sticky; top: 0; z-index: 100;}
+.header .user {
+    height: 50px; 
+    /* border: 1px solid black; */
+}
+.header .user .util li {margin-right: 15px;}
+
+.header .info {
+    width: 100%;
+    height: 80px; 
+    border: 1px dashed var(--main);
+    position: relative;
+}
+.header .info h1 {
+    width: 20%; height: 100%; 
+    /* border: 1px solid black;  */
+}
+.header .info .gnb li {margin-right: 30px; padding: 30px 0; }
+.header .info .gnb li.sub {padding: 20px 0; }
+
+.header .info .gnb li:hover {color: var(--sub);}
+
+/* 1차 메뉴에 마우스 호버 시, 2차 메뉴 출력 */
+.header .info .gnb > li:hover .submenu {display: block;}
+
+/* 2차 메뉴 */
+.header .info .gnb .submenu {
+    display: none;
+    /* display: block; */
+    position: absolute;
+    top: 78px;
+    right: 0;
+    width: 510px;
+    height: 300px;
+    background-color: white;
+    text-align: center;
+    line-height: 1px;
+}
+
+.header .info .gnb li .submenu li a {color: black; font-size: 1.2rem; text-align: center; font-size: 15px;}
+.header .info .gnb li .submenu li:hover {background-color: var(--main);}
+.header .info .gnb li .submenu li:hover a {color: white;}
+
+/* 사이드바 */
+.sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: #f1f1f1;
+    position: absolute;
+    left: -200px;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* 체크박스 출력하지 않기 */
+input[name='category'] {display: none;}
+
+/* 카테고리를 체크했을 때, 사이드바 슬라이드가 되도록 */
+input#category:checked ~ .sidebar {
+    left: 0;
+}
+
+.btn {
+    cursor: pointer;
+    user-select: none; /* 텍스트 드래그 방지 */
+}
+
+/* 1차 메뉴 */
+.side-main > li:hover {background-color: var(--sub);}
+.side-main > li:hover > a {color: white;}
+
+/* 1차 메뉴에 마우스 호버 시, 2차 메뉴 출력 */
+.side-main li:hover > .side-sub {display: block;}
+
+/* 2차 메뉴 */
+.side-main .side-sub {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+.side-sub li a {color: black;}
+.side-sub li:hover {background-color: var(--main);}
+.side-sub li:hover a {color: white;}
+
+
+/* 섹션 */
+section {min-height: 100px; }
+
+section.visual .inner-box {
+    background: url(../img/dino_bg.JPG) center center;
+    width: 100%;
+    height: 800px; 
+    overflow: hidden;
+    background-size: cover;
+}
+
+/* 타이틀 */
+section .section-title {height: 200px;}
+section .section-title h2 {
+    font-size: 2.4rem; 
+    color: var(--sub);
+    margin-top: 100px;
+}
+
+/* 카테고리 영역 */
+section .section-cate {
+    height: 100px;
+}
+
+section .section-cate .inner {
+    width: 80%;
+    height: auto;
+}
+
+section .section-cate .inner span {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    background-color: var(--main);
+    color: white;
+    border-radius: 15px;
+    /* box-shadow: 0 5px 5px rgba(0,0,0,0.25); */
+}
+
+/* 섹션 - 상품목록 */
+.product-list .inner { margin: 0 auto 100px; width: 98%; border: 0.5px dashed var(--main);}
+.product-list .card {
+    width: calc(92% / 4);
+    margin: 1%;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.25);
+}
+.product-list .card:hover {cursor: pointer;}
+.product-list .card img {width: 100%; }
+.product-list .card .card-content {padding: 20px;}
+.product-list .card .card-content h2 {margin: 5px 0; text-align: center;}
+.product-list .card .card-content p {margin-bottom: 10px; text-align: center;}
+.product-list .card .card-content p .discount span.throw {
+    text-decoration: line-through; text-align: center;
+}
+.product-list .card .card-content p.discount span.throw-under {
+    text-decoration: line-through; text-align: center;
+}
+.product-list .card .card-content p.discount span.percent {
+    background-color: var(--sub); color: white;
+    border-radius: 5px; opacity: 0.8;
+    font-weight: bolder; padding: 0 5px;
+}
+.product-list .card .card-content p.price {
+    margin-bottom: 10px; color: var(--sub); font-weight: bolder;
+}
+.product-list .card .card-content p.soldout { color: var(--sub); font-weight: bold;}
+
+/* 섹션 - 기타 */
+section.etc .box {
+    height: auto; 
+    /* border: 1px solid black; */
+}
+section.etc .box .col {
+    width: 50%; height: 100%; ;
+    /* border: 1px solid hotpink; */
+}
+section.etc .box .col:last-child  {
+    width: 100%; text-align: center;
+}
+section.etc .box .col img {
+    width: 100%; 
+}
+
+/* 푸터 */
+footer {min-height: 200px;}
+footer .fnb {
+    height: 100px; 
+    background-color: var(--main);
+    color: white;
+    /* border: 1px solid black; */
+}
+footer .fnb ul li {font-size: 0.9rem;}
+footer .fnb ul li a {margin: 0 30px;}
+footer .fnb ul li a:hover {color: var(--sub);}
+footer .box {
+    margin: 0 auto; width: 90%; height: 100px;
+    /* border: 1px solid brown; */
+}
+footer .box .col {
+    width: 33%; height: 100%; 
+    /* border: 1px solid firebrick; */
+}
+footer .box .col ul {height: 100%;}
+footer .box .col p.copy {font-size: 12px;}
+
+
+
+
+
+
+/* 반응형 */
+/* pc : 1200px ~ 1799px*/
+@media screen and (max-width: 1799px) {
+    
+}
+
+/* 태블릿(가로) : 900px ~ 1199px */
+@media screen and (max-width: 1199px) {
+    /* 전체영역 */
+    .inner-box {width: 100%;}
+
+    /* 태블릿/모바일 로고 */
+    .header .info h1 {width: 40%;}
+
+    /* 상품목록 - 3개 */
+    .product-list {width: 100%;}
+    .product-list .card {width: calc(94% / 3);}
+
+    /* 카테고리 */
+    section .section-cate .inner span {
+        padding: 10px 10px;
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+/* 모바일(가로), 태블릿(세로) : 600px ~ 899px */
+@media screen and (max-width: 899px) {
+    /* 전체영역 */
+    .inner-box {width: 100%;}
+
+    /* pc / 모바일 전환 */
+    .pc {display: none;}
+    .mobile {display: block;}
+
+    /* 모바일 햄버거 메뉴 */
+    .mobile-gnb-box {
+        padding: 30px; font-size: 50px;
+        color: var(--sub);
+    }
+
+    /* 섹션 : visual */
+    section.visual .title {display: block;}
+    section.visual .inner-box {display: block;}
+    section.visual .inner-box .title-content {width: 100%;}
+    section.visual .inner-box .main-img {width: 100%;}
+
+    /* 카테고리 */
+    section .section-cate .inner span {
+        padding: 10px 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    section .section-title h2 {
+        font-size: 1.4rem;
+    }
+
+    /* 섹션 : 상품목록 -2개 */
+    .product-list {width: 100%;}
+    .product-list .card {width: calc(96% / 2);}
+
+    /* 섹션 : 기타 */
+    section.etc .box {display: block;}
+    section.etc .box .col.left,
+    section.etc .box .col.right {
+        float: left; width: 50%; height: auto;
+    }
+
+    section.etc .box .col.bottom {
+        display: block;
+        clear: both;
+        width: 100%;
+        height: auto;
+    }
+
+    /* 푸터 */
+    footer .box {flex-direction: column; height: 200px; margin-bottom: 30px;}
+    footer .box .col {width: 100%; } 
+    footer .box .col a img {margin: 30px 0 0; }
+}
+
+/* 모바일(세로) : ~ 599px */
+@media screen and (max-width: 599px) {
+    /* 섹션 : 상품목록 - 1개 */
+    .product-list {width: 100%;}
+    .product-list .card {width: calc(94% / 1); margin-left: 3.5%;}
+}
+/* 카테고리 */
+
+section .section-cate .inner a {font-size: 12px;}
+section .section-cate .inner span {
+    padding: 6px 6px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+footer .fnb .flex li a {font-size: 0.5rem;}

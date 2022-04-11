@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조선택자</title>
+    <style>
+        ul {
+            overflow: hidden;   /* 부모 박스는 자식 박스를 포함 */
+        }
+        li {
+            list-style: none;   /* 항목 태그의 블릿 아이콘을 숨김 */
+            float: left;
+            padding: 15px;
+        }
+        li:nth-child(2n) {
+            /* li 태그 중 짝수 번째에 해당하는 li 태그들의 배경 색상과 글자 색상을 지정 */
+            background: gray;
+            color: pink;
+        }
+        li:nth-child(2n+1) {
+            /* li 태그 중 홀수 번째에 해당하는 li 태그들의 배경 색상과 글자 색상을 지정 */
+            background: black;
+            color: #ffd800;
+        }
+        li:first-child {
+            /* li 태그 중 첫 번째에 해당하는 li 태그는 배경 색상과 글자 색상을 지정 */
+            background: black;
+            color: white;
+        }
+        li:last-child {
+            /* li 태그 중 마지막에 해당하는 li 태그는 배경 색상과 글자 색상을 지정 */
+            background: gray;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>menu01</li>
+        <li>menu02</li>
+        <li>menu03</li>
+        <li>menu04</li>
+        <li>menu05</li>
+        <li>menu06</li>
+    </ul>
+</body>
+</html>

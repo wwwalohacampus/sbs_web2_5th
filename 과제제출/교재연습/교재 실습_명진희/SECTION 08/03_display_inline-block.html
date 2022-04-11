@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display-inline-block</title>
+    <style>
+        li {
+            border: 2px solid black;
+        }
+        .menu1 {
+            display: inline;   /* 목록 항목의 스타일 기호를 없앰 */
+            height: 40px;   /* 높이를 지정하면 inline 속성으로 높이가 적용되지 않음 */
+            background-color: yellowgreen;
+        }
+        .menu2 {
+            display: inline-block;   /* inline 속성으로 변경 */
+            height: 40px;   /* 높이를 지정하면 inline-block 속성으로 높이가 적용됨 */
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- inline 속성으로 변경된 가로 메뉴 -->
+    <ul>
+        <li class="menu1">inline</li>
+        <li class="menu1">inline</li>
+        <li class="menu1">inline</li>
+        <li class="menu1">inline</li>
+    </ul>
+    <!-- inline-block 속성으로 변경된 가로 메뉸 -->
+    <ul>
+        <li class="menu2">inline-block</li>
+        <li class="menu2">inline-block</li>
+        <li class="menu2">inline-block</li>
+        <li class="menu2">inline-block</li>
+    </ul>
+</body>
+</html>

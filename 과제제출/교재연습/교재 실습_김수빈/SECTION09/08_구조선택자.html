@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keat</title>
+    <style>
+        ul {overflow: hidden; /* 부모박스는 자식박스를 포함 */}
+        li {
+            list-style: none;
+            float: left;
+            padding: 15px;
+        }
+        li:nth-child(2n) {
+            /* li태그 중 짝수 번째에 해당하는 li태그들 */
+            background-color: gray;
+            color: pink;
+        }
+        li:nth-child(2n+1) {
+            /* li태그 중 홀수 번째에 해당하는 li태그들 */
+            background-color: black;
+            color: #ffd800;
+        }
+        li:first-child {
+            /* li태그 중 첫번째 li태그 */
+            background: black;
+            color: white;
+        }
+        li:last-child {
+            /* li태그 중 마지막 li태그 */
+            background: gray;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+        <li>menu6</li>
+    </ul>
+</body>
+</html>

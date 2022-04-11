@@ -1,0 +1,17 @@
+/* 웹 문서 제작 시 초기화 스타일 */
+* {margin: 0; padding: 0;}
+
+a {text-decoration: none;}
+li {list-style: none;}
+img {
+    display: block; 
+    /* inline속성을 지니고 있는 img태그의 오차 간격을 없애기 위한 속성 변경 */
+    border: none;
+    /* img태그의 모든 테두리 선은 없음으로 초기화 */
+}
+body {
+    font-family: 'Verdana';
+    font-size: 14px;
+    color: black;
+    line-height: 28px;
+}

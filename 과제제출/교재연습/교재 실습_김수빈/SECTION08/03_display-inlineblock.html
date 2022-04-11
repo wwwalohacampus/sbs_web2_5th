@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keat</title>
+    <style>
+        li {border: 2px solid black;}
+        .menu1 {
+            background-color: yellowgreen; 
+            height: 40px; /* inline은 높이 적용이 안 됨 */ 
+            display: inline; /* 목록 항목의 스타일 기호 없앰 */
+        }
+        .menu2 {
+            background-color: orange; 
+            display: inline-block; /* inline 속성으로 변경 */
+            height: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- inline 속성으로 변경된 가로 메뉴 -->
+    <ul>
+        <li class="menu1">inline</li>
+        <li class="menu1">inline</li>
+        <li class="menu1">inline</li>
+        <li class="menu1">inline</li>
+    </ul>
+
+    <!-- inline-block 속성으로 변경된 가로 메뉴 -->
+    <ul>
+        <li class="menu2">inline-block</li>
+        <li class="menu2">inline-block</li>
+        <li class="menu2">inline-block</li>
+        <li class="menu2">inline-block</li>
+    </ul>
+    
+</body>
+</html>

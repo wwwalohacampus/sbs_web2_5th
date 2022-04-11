@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-size</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body {
+            background-image: url(img/01.jpg);
+            /* 배경 크기를 적용하는 기본 방식 */
+            background-size: 100% 500px;
+            /* 배경 이미지 사이즈 100%는 브라우저의 가로 길이를 기준으로 100% */
+            /* 100%(가로 크기), 500px(세로 크기) */
+            
+            background-repeat: no-repeat;
+            /*
+                배경 이미지의 초기 반복 값은 가로, 세로 모두 반복
+                no-repeat 은 반복하지 않음
+                repeat-x 는 가로 반복
+                repeat-y 는 세로 반복
+            */
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

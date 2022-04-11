@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태 선택자, 동위 선택자 복합</title>
+    <style>
+        /* 
+            input 태그의 type 속성 값이 checkbox 인 태그가 체크되었을 때, 
+            바로 뒤에 위치하는 div 태그를 숨기거나 나타냄
+        */
+        input[type=checkbox]:checked + div { height: 0; }
+        div {
+            overflow: hidden;
+            width: 650px;
+            height: 300px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" />
+    <div>
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam quae sunt aut corporis veniam animi, minus commodi dignissimos doloremque itaque consectetur quibusdam deserunt dolorem magni, fugiat ipsa tempora voluptatum debitis.</p>
+    </div>
+</body>
+</html>

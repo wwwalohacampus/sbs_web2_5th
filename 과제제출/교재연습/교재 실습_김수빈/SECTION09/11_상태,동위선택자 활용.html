@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keat</title>
+    <style>
+        /* input태그의 type속성값이 checkbox인 태그가 체크되었을 때 바로 뒤에 위치하는 div태그를 숨기거나 나타냄 */
+        input[type=checkbox]:checked + div {
+            height: 0;
+            /* display: none; */
+        }
+        div {
+            overflow: hidden;
+            width: 650px;
+            height: 300px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" />
+    <div>
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type</p>
+    </div>
+</body>
+</html>
